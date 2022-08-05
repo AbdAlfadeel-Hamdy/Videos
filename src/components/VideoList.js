@@ -1,7 +1,9 @@
 import React from "react";
-
-const VideoList = (props) => {
-  return <div>{props.videos.length}</div>;
+import VideoItem from "./VideoItem";
+const VideoList = ({ videos }) => {
+  const renderedList = videos.map((video) => <VideoItem />);
+  console.log(renderedList);
+  return <div>{renderedList}</div>;
 };
 
 export default VideoList;
